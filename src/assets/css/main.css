@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+:root {
+    --main-color: #2678b4;
+    --lighter-text: #888;
+    --darker-text: #444;
+}
+
+body {
+    background: linear-gradient(135deg, silver, white, lightgrey, transparent)
+}
+
+.d-none {
+    display: none!important;
+}
+
+.header-part {
+    display: block;
+    color: var(--darker-text);
+}
+
+.header-part h2 {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 575px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.grid-container>div {
+    background: #f1f1f1;
+    border-radius: 15px;
+    min-height: 50px;
+    padding: 25px;
+    position: relative;
+    display: block;
+}
+
+.grid-container>div h2 {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+
+.left-grid h5 {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    color: var(--darker-text);
+}
+
+.left-grid h5>span {
+    margin-right: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.input-group>label {
+    font-size: 13px;
+    color: var(--darker-text);
+    margin-right: 10px;
+
+}
+
+.input-group>input[type=number] {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    border: 1px solid var(--lighter-text);
+    padding: 3px 10px;
+    font-size: 14px;
+    text-align: right;
+    color: var(--lighter-text);
+    margin-right: 20px;
+    min-width: 50px;
+
+}
+
+.input-group>input[type=number]:focus,
+button:focus {
+    box-shadow: 0 0 4px var(--main-color);
+}
+
+.input-group > button {
+    display: inline-block;
+    padding: 3px 10px;
+    position: relative;
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.input-group > button:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
+/* Third panel for average score */
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score-container h3, .score-container h5 {
+    margin: 0;
+    display: inline-block;
+}
+
+.score-container h3 {
+    font-weight: 500;
+    color: var(--darker-text);
+}
+
+.score-container h5 {
+    color: var(--main-color);
+    font-size: 15px;
+}
